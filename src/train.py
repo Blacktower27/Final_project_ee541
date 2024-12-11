@@ -23,9 +23,11 @@ model_dir.mkdir(exist_ok=True)
 log_dir = base_dir / "logs"
 log_dir.mkdir(exist_ok=True)
 
-PATH_G = model_dir / "abc_G.pt"
-PATH_D = model_dir / "abc_D.pt"
-LOG_FILE = log_dir / "training_log_abc_X2.txt"
+
+model_name = FEATURE_EXTRACTOR.lower()
+PATH_G = model_dir / f"{model_name}_G_X{UPSCALE}.pt"
+PATH_D = model_dir / f"{model_name}_D_X{UPSCALE}.pt"
+LOG_FILE = log_dir / f"training_log_{model_name}_X{UPSCALE}.txt"
 
 transform_hr = trf.Compose([
     trf.CenterCrop(HR_CROPPED_SIZE),
