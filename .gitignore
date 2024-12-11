@@ -1,16 +1,10 @@
-# Ignore dataset files
+# Ignore all files in these directories
 DIV2K/*
-
-# Ignore logs
 logs/*
-
-# Ignore models
 models/*
-
-# Ignore results
 results/*
 
-# Allow folder structure
+# Allow .gitkeep to be included
 !DIV2K/.gitkeep
 !logs/.gitkeep
 !models/.gitkeep
