@@ -23,9 +23,14 @@ Data files are structured as follows:
 ```
 DIV2K/
 ├── DIV2K_train_HR/                # 800 HR training images
-├── DIV2K_train_LR_bicubic/X4/     # 800 LR training images (4x downscaled)
+├── DIV2K_train_LR_bicubic/
+│  ├── X4/     # 800 LR training images (4x downscaled)
+│  ├── X2/     # 800 LR training images (2x downscaled)
 ├── DIV2K_valid_HR/                # 100 HR validation images
-└── DIV2K_valid_LR_bicubic/X4/     # 100 LR validation images (4x downscaled)
+├── DIV2K_valid_LR_bicubic     
+│  ├── X4/     # 100 LR validation images (4x downscaled)
+└───── X2/     # 100 LR validation images (2x downscaled)
+
 ```
 
 To use the dataset, download the DIV2K HR and bicubic LR (X2 and X4) images from the official [DIV2K dataset page](https://data.vision.ee.ethz.ch/cvl/DIV2K/), and extract them into the `DIV2K/` folder as shown above.
