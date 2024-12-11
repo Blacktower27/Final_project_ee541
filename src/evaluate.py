@@ -5,9 +5,6 @@ from PIL import Image
 from torchvision.transforms import ToTensor
 from glob import glob
 
-# sys.path.append('/content/gdrive/MyDrive/DIP/')
-# from gen_sr import SR_VAL_DIR
-# from CONFIG import VAL_HR_DIR
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
