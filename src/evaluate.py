@@ -26,10 +26,11 @@ def eval_PSNR_SSIM():
 	sr_vals = glob(f"{SR_VAL_DIR}/*.png")
 
 	for sr_path in sr_vals:
-		file_name = sr_path.split('/')[-1]
+		# file_name = sr_path.split('/')[-1]
+		file_name = os.path.basename(sr_path)
 		file_name = file_name.replace("sr_", '').replace("x4", '').replace("x2", '')
-		hr_path = os.path.join(VAL_HR_DIR, file_name)
 
+		hr_path = os.path.join(VAL_HR_DIR, file_name)
 		sr = load_img_to_tensor(sr_path)
 		hr = load_img_to_tensor(hr_path)
 
