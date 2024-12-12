@@ -1,7 +1,7 @@
 from pathlib import Path
 
 LR_CROPPED_SIZE = 100
-UPSCALE = 2
+UPSCALE = 4
 HR_CROPPED_SIZE = UPSCALE * LR_CROPPED_SIZE
 
 base_dir = Path(__file__).resolve().parent
@@ -26,4 +26,4 @@ VGG_LOSS_COEF = 0.006
 ADVERSARIAL_LOSS_COEF = 0.001
 
 # Specify feature extractor: 'Residual_Block', 'Cnn_Block', 'Dense_Block', or 'SwinTransformer_Block'
-FEATURE_EXTRACTOR = "Residual_Block"
+FEATURE_EXTRACTOR = "SwinTransformer_Block"
