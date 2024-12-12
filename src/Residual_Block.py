@@ -1,5 +1,5 @@
 import torch.nn as nn
-
+import torch.nn.functional as F
 class Residual_Block(nn.Module):
 	def __init__(self, in_channels, out_channels, strides, use_1x1_conv=True):
 		super(Residual_Block, self).__init__()
