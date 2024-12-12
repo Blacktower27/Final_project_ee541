@@ -1,7 +1,7 @@
 from pathlib import Path
 
 LR_CROPPED_SIZE = 100
-UPSCALE = 4
+UPSCALE = 2
 HR_CROPPED_SIZE = UPSCALE * LR_CROPPED_SIZE
 
 base_dir = Path(__file__).resolve().parent
