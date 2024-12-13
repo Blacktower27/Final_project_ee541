@@ -31,10 +31,15 @@ LOG_FILE = log_dir / f"training_log_{model_name}_X{UPSCALE}.txt"
 
 transform_hr = trf.Compose([
     trf.CenterCrop(HR_CROPPED_SIZE),
+    trf.RandomHorizontalFlip(),
+    trf.RandomVerticalFlip(),
     trf.ToTensor()
 ])
+
 transform_lr = trf.Compose([
     trf.CenterCrop(LR_CROPPED_SIZE),
+    trf.RandomHorizontalFlip(),
+    trf.RandomVerticalFlip(),
     trf.ToTensor()
 ])
 
